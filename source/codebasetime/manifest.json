@@ -1,0 +1,16 @@
+{
+  "name": "Codebase Time Formatter",
+  "version": "1.0.1",
+  "description": "Formats minutes as human-readable days, hours, and minutes.",
+  "icons": {
+    "48" : "codebasetime-48.png",
+    "128" : "codebasetime-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.codebasehq.com/*/tickets*", "https://*.codebasehq.com/*/milestones/*"],
+      "js" : ["codebasetime.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
